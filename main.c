@@ -45,10 +45,8 @@ int main(int argc, char* argv[]) {
 
     if(strcmp(argv[1], "-p") == 0) {
         port = atoi(argv[2]);
-        printf("Successfully got the CLI argument\n");
         socket_address.sin_port = htons(port);
     } else {
-        printf("Using default port\n");
         socket_address.sin_port = htons(DEFAULT_PORT);
     }
 
